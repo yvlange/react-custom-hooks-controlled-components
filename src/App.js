@@ -22,6 +22,13 @@ function App() {
   function handleSubmit(event) {
     event.preventDefault();
     console.log(userData);
+    setUserData({
+      firstName: "",
+      lastName: "",
+      age: 0,
+      email: "",
+      newsletter: false,
+    });
   }
 
   return (
@@ -59,7 +66,6 @@ function App() {
         />
         <div className="newsletter">
           <input
-            required
             type="checkbox"
             name="newsletter"
             checked={userData.newsletter}
